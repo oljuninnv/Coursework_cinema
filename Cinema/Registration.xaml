@@ -1,0 +1,29 @@
+﻿<Window x:Class="Cinema.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="800">
+    <Grid Background="#FFC3FFF4">
+        <Label Content="Регистрация" HorizontalAlignment="Left" Margin="300,27,0,0" VerticalAlignment="Top" Width="160" FontSize="24"/>
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Margin="300,264,0,0" TextWrapping="Wrap" Text="" Width="160" Height="40" VerticalAlignment="Top"/>
+        <Label Content="Логин:" HorizontalAlignment="Left" Margin="162,267,0,0" VerticalAlignment="Top" Width="78" FontSize="20"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="160,318,0,0" VerticalAlignment="Top" Height="41" Width="85" FontSize="20"/>
+        <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="160,142,0,0" VerticalAlignment="Top" Width="115" FontSize="20"/>
+        <Label Content="Имя:" HorizontalAlignment="Left" Margin="160,83,0,0" VerticalAlignment="Top" Height="41" Width="85" FontSize="20"/>
+        <Label Content="Отчество:" HorizontalAlignment="Left" Margin="160,202,0,0" VerticalAlignment="Top" Width="133" FontSize="20"/>
+        <Button x:Name="Reg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="300,372,0,0" VerticalAlignment="Top" Width="160" Height="39" Click="Reg_Click"/>
+        <Label x:Name="UsernameLabel" Content="" HorizontalAlignment="Left" Margin="480,264,0,0" VerticalAlignment="Top" Foreground="#FFF70000" Width="320" Height="40"/>
+        <Label x:Name="PasswordLabel" Content="" HorizontalAlignment="Left" Margin="480,304,0,0" VerticalAlignment="Top" Foreground="#FFFF0101" Width="320" Height="75"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="300,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="40"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Margin="300,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="40"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="300,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="40"/>
+        <Label x:Name="NameLabel" Content="" HorizontalAlignment="Left" Margin="480,64,0,0" VerticalAlignment="Top" Foreground="#FFF70000" Width="320" Height="60"/>
+        <Label x:Name="SurnameLabel" Content="" HorizontalAlignment="Left" Margin="480,144,0,0" VerticalAlignment="Top" Foreground="#FFF70000" Width="320" Height="40"/>
+        <Label x:Name="LastNameLabel" Content="" HorizontalAlignment="Left" Margin="480,184,0,0" VerticalAlignment="Top" Foreground="#FFF70000" Width="320" Height="60"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="305,324,0,0" VerticalAlignment="Top" Width="155" Height="40"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Cinema.SellerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema"
+        mc:Ignorable="d"
+        Title="SellerWindow" Height="450" Width="800">
+    <Grid Background="#FFC3FFF4">
+        <Button x:Name="Films_Button" Content="Фильмы" HorizontalAlignment="Left" Margin="40,79,0,0" VerticalAlignment="Top" Height="28" Width="200" RenderTransformOrigin="0.5,0.001" Click="Films_Button_Click"/>
+        <Button x:Name="Seans_Button" Content="Сеансы" HorizontalAlignment="Left" Margin="40,125,0,0" VerticalAlignment="Top" Width="200" Height="30" Click="Seans_Button_Click"/>
+        <Button x:Name="Tickets_Button" Content="Билеты" HorizontalAlignment="Left" Margin="40,166,0,0" VerticalAlignment="Top" Width="200" Height="30"/>
+        <Button x:Name="Generate_Tickets_Button" Content="Сгенерировать билеты" HorizontalAlignment="Left" Margin="40,205,0,0" VerticalAlignment="Top" Width="200" Height="30"/>
+        <Button x:Name="Delete_Seans_Button" Content="Удалить прошедшие сеансы" HorizontalAlignment="Left" Margin="40,245,0,0" VerticalAlignment="Top" Width="200" Height="30"/>
+        <Button x:Name="Exit_Button" Content="Выход" HorizontalAlignment="Left" Margin="40,303,0,0" VerticalAlignment="Top" Width="200" Height="30" Click="Exit_Button_Click"/>
+        <Label x:Name="Admin_Name" Content="Добро пожаловать в панель касира" HorizontalAlignment="Left" Margin="40,24,0,0" VerticalAlignment="Top" Height="36" Width="595" FontSize="22"/>
+
+    </Grid>
+</Window>

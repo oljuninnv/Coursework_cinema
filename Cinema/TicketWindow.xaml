@@ -1,0 +1,65 @@
+﻿<Window x:Class="Cinema.TicketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema"
+        xmlns:command="clr-namespace:Cinema.Comands"
+        mc:Ignorable="d"
+        Title="Билеты" Height="450" Width="800">
+    <Grid Background="#FFC3FFF4">
+        <ToolBar Name="ToolBar" Margin="4,9,2,367" Height="30" Grid.ColumnSpan="2">
+            <Button Name="Undo" Margin="5,2,5,2"  Command="Undo" ToolTip="Отменить">
+                <Image Source="Images/Undo.png"></Image>
+            </Button>
+            <Button Name="Add" Margin="5,2,5,2" Command="New" ToolTip="Добавить">
+                <Image Source="Images/Add.png"></Image>
+            </Button>
+            <Button Name="Edit" Margin="5,2,5,2" Command="{x:Static command:DataCommands.Edit}" ToolTip="Редактировать">
+                <Image Source="Images/Edit.png"></Image>
+            </Button>
+            <Button Name="Find" Margin="5,2,5,2" Command="Find" ToolTip="Поиск">
+                <Image Source="Images/Find.png"></Image>
+            </Button>
+            <Button Name="Save" Margin="5,2,5,2" Command="Save" ToolTip="Сохранить">
+                <Image Source="Images/Save.png"></Image>
+            </Button>
+            <Button Name="Delete" Margin="5,2,5,2" Command="{x:Static command:DataCommands.Delete}" ToolTip="Удалить">
+                <Image Source="Images/Delete.png"></Image>
+            </Button>
+        </ToolBar>
+
+        <TextBlock Margin="10,0,0,343" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="27" Width="215" Grid.ColumnSpan="2">Список билетов</TextBlock>
+
+        <DataGrid  Name="DataGridTicket" Cursor="Hand" ItemsSource="{Binding Cooking_Recipes}" 
+            IsReadOnly="True" Height="Auto" Width="Auto" BorderThickness="6" AutoGenerateColumns="False" Margin="5,98,320,134" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата и время продажи" Binding="{Binding Date, Mode=TwoWay}" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding Time, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="Фильм" Binding="{Binding Price, Mode=TwoWay}" />
+                <DataGridTextColumn Header="Дата и время сеанса" Binding="{Binding Film, Mode=TwoWay}" />
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Hall, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="Место" Binding="{Binding Hall, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Hall, Mode=TwoWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Поиск" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Top" Height="38" Width="80" Margin="637,61,0,0"/>
+        <TextBlock x:Name="TextBlockFilm3" Text="Фильм" FontSize="15" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="80" Height="20" Margin="497,99,0,0" />
+        <TextBlock x:Name="TextBlockDateTime" Text="Зал" FontSize="15" HorizontalAlignment="Left" Width="40" VerticalAlignment="Top" Height="20" Margin="500,199,0,0" />
+        <ComboBox x:Name="TextBoxFilm" Width="217"  Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="560,100,0,0"/>
+        <ComboBox x:Name="ComboBoxHall" Width="218" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="560,0,0,214" />
+        <TextBlock x:Name="TextBlockStatus" Text="Статус" Width="45"  Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="500,237,0,0"/>
+        <TextBlock x:Name="TextBlockTime" Text="Время" Width="63"  Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="497,166,0,0"/>
+
+        <ComboBox x:Name="ComboBoxStatus" Width="218" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="559,236,0,0"/>
+        <TextBlock x:Name="TextBlockSeats" Text="Место" Width="85"  Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="495,267,0,0"/>
+        <TextBox Name="ComboBoxSeats" Width="218" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="557,0,0,146" />
+        <TextBlock x:Name="TextBlockDate" Text="Дата" Width="60"  Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="500,135,0,0"/>
+
+        <Button x:Name="Find_Button" Content="Поиск" Width="216" Height="24" VerticalAlignment="Bottom" Margin="559,0,0,106" HorizontalAlignment="Left"/>
+        <ComboBox x:Name="ComboBoxDate" HorizontalAlignment="Left" Margin="560,134,0,0" VerticalAlignment="Top" Width="220"/>
+        <ComboBox HorizontalAlignment="Left" Margin="560,167,0,0" VerticalAlignment="Top" Width="220"/>
+
+    </Grid>
+</Window>
